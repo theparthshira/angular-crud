@@ -1,0 +1,15 @@
+<div>
+  <button (click)="newNote()">New Note</button>
+  <button (click)="logout()">Logout</button>
+  <br />
+  <div *ngFor="let note of notes">
+    <div>
+      <h6>{{ note.id }}</h6>
+      <h2>{{ note.title }}</h2>
+      <p>{{ note.note }}</p>
+      <button (click)="editNote(note)">Edit</button>
+      <button (click)="deleteNote(note)">Delete</button>
+    </div>
+    <br />
+  </div>
+</div>

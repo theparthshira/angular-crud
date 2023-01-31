@@ -1,0 +1,14 @@
+<div>
+  <form [formGroup]="noteForm" (submit)="createNote()">
+    <div>
+      <label>Title: </label>
+      <input type="string" formControlName="title" />
+    </div>
+    <div>
+      <label>Note: </label>
+      <textarea cols="30" rows="10" formControlName="note"></textarea>
+    </div>
+    <button type="submit">Save</button>
+    <button (click)="clearNote()">Clear</button>
+  </form>
+</div>

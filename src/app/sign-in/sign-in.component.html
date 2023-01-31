@@ -1,0 +1,16 @@
+<div>
+  <form [formGroup]="signIn" (submit)="checkSignIn()">
+    <div>
+      <label>Username: </label>
+      <input type="text" formControlName="username" />
+    </div>
+    <div>
+      <label>Password: </label>
+      <input type="password" formControlName="password" />
+    </div>
+    <div *ngIf="error_code">
+      <p>enter correct credds</p>
+    </div>
+    <button type="submit">Signin</button>
+  </form>
+</div>
